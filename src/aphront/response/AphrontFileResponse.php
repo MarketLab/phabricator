@@ -94,7 +94,7 @@ final class AphrontFileResponse extends AphrontResponse {
       $content_len = $this->getContentLength();
     }
 
-    $headers[] = array('Content-Length', $this->getContentLength());
+    $headers[] = array('Content-Length', $content_len);
 
     if (strlen($this->getDownload())) {
       $headers[] = array('X-Download-Options', 'noopen');
